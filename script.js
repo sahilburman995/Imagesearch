@@ -53,3 +53,22 @@
                 searchimage();
             })
         });
+
+        let count=0;
+        const mycount=document.getElementById('counter')
+        const countdiv = document.createElement("div");
+       
+        mycount.appendChild(countdiv)
+       
+        countdiv.textContent=count;
+        morebutton.addEventListener('click',()=>{
+            count=count+1;
+            countdiv.textContent=`${count}`;
+        })
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+        });
+        
